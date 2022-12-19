@@ -120,12 +120,12 @@
 12. `void loadInode(inode *in, int inum)`：根据inode的存储结构从硬盘中读出`inum`的inode到`in`所指向的结构体中。
 
 13. `int addItem(int finum, int inum, char *name)`：在`finum`文件夹下添加名为`name`，inode编号`为inum`的item结构体。先构造存储字符串：
-
+    
    $$
-   2B\cdot year+1B\cdot month+2B\cdot day+5B\cdot second
+   3B\cdot inum+4B\cdot strlen+ (strlen) B\cdot name
    $$
 
-    然后调用`appendDataBlock`写入data block。字符串可能不足64B，但`size+=64`。
+   $\qquad$然后调用`appendDataBlock`写入data block。字符串可能不足64B，但`size+=64`。
 
 14. `void loadItem(item *it, char *str)`：字符串`str`是item的存储字符串，根据每部分的固定长度将信息存入`it`指向的结构体中。
 
