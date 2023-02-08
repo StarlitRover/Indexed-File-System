@@ -157,9 +157,9 @@
 
 ## 效果展示
 
-<img title="" src="images/demo1.png" alt="" data-align="center" width="510">
+![](images/demo1.png)
 
-<img title="" src="images/demo2.png" alt="" data-align="center" width="510">
+![](images/demo2.png)
 
 ## debug日志
 
